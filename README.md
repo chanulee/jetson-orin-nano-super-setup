@@ -5,8 +5,6 @@ Setup guide + automation script to run Google's **Gemma 4 E4B GGUF** model on yo
 I'm using a custom compiled build of `llama.cpp` targeting the Orin's Ampere GPU to get full hardware acceleration.
 Using Q4 model instead of Q8 - Ref [this video](https://www.youtube.com/watch?v=EGnA_kqu3is&list=WL&index=5)
 
----
-
 ## Quick Start: One-Command Installation
 
 To install everything, simply open your terminal, navigate to this folder, and run:
@@ -27,8 +25,6 @@ This was tested on JetPack 7.2. If you have to set up your Jetpack, check the of
     *   Ampere Architecture Targeting (`CMAKE_CUDA_ARCHITECTURES=87`)
 5.  **Downloads the Model**: Downloads the `gemma-4-E4B-it-Q4_K_M.gguf` (~4.7GB) model from Hugging Face.
 
----
-
 ## Running the Local LLM Server
 
 Once installation is finished, start your local server by running:
@@ -40,8 +36,6 @@ Once installation is finished, start your local server by running:
 ### Accessing your LLM:
 *   **Web Chat UI**: Open your web browser and go to **`http://localhost:8080`**. It has a built-in interactive chat interface.
 *   **API Server**: The port `8080` acts as an OpenAI-compatible API server. You can connect it to other apps (like Open WebUI, LlamaIndex, or LangChain) using `http://localhost:8080/v1`.
-
----
 
 ## Customization & Advanced Tuning
 
@@ -65,8 +59,6 @@ Unsloth provides a Quantization-Aware Trained (QAT) model that provides higher r
 ### 2. Increase Context Size (4096 vs. 8192)
 A larger context window increases memory use due to the KV cache. If your memory headroom allows, you can change `CTX_SIZE=4096` to `CTX_SIZE=8192` in `run.sh`.
 
----
-
 ## Monitoring Resources
 Since Jetson uses unified memory, you should monitor your hardware load. Open a separate terminal and run:
 ```bash
@@ -80,8 +72,6 @@ sudo init 3     # stop the desktop
 # log your user back into the console (Ctrl+Alt+F1, F2, etc.)
 sudo init 5     # restart the desktop
 ```
-
----
 
 ## Troubleshooting
 
