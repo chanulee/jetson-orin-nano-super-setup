@@ -1,4 +1,4 @@
-# Gemma 4 E4B local LLM on Jetson Orin Nano Super
+# Jetson Orin Nano Super DevKit + Gemma4 E4B Q4
 
 Setup guide + automation script to run Google's **Gemma 4 E4B GGUF** model on your **NVIDIA Jetson Orin Nano Super Developer Kit** (8GB unified memory, 67 TOPS).
 
@@ -13,7 +13,7 @@ To install everything, simply open your terminal, navigate to this folder, and r
 ./install.sh
 ```
 
-This was tested on JetPack 7.2. If you have to set up your Jetpack, check the official setup guide by [NVIDIA](https://docs.nvidia.com/jetson/orin-nano-devkit/user-guide/latest/quick_start.html#overview)
+This was tested on JetPack 7.2. If you have to set up your Jetpack, check the official setup guide by [NVIDIA](https://docs.nvidia.com/jetson/orin-nano-devkit/user-guide/latest/quick_start.html#overview) and this guide from [this video](https://www.youtube.com/watch?v=BaRdpSXU6EM)
 
 ### What the installer does:
 1.  **Configures 8GB Swap Space**: Crucial for Orin's 8GB unified memory to prevent out-of-memory crashes.
